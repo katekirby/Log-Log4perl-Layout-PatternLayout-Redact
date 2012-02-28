@@ -41,7 +41,7 @@ Version 1.0.0
 
 our $VERSION = '1.0.0';
 
-our $SENSITIVE_ARGUMENTS_NAME = undef;
+our $SENSITIVE_ARGUMENT_NAMES = undef;
 
 
 =head1 SYNOPSIS
@@ -71,7 +71,7 @@ Log::Log4perl::Layout::PatternLayout::add_global_cspec(
 		
 		my $redacted_stack_trace = Carp::Parse::Redact::parse_stack_trace(
 			$trace,
-			sensitive_argument_names => $SENSITIVE_ARGUMENTS_NAME,
+			sensitive_argument_names => $SENSITIVE_ARGUMENT_NAMES,
 		);
 		
 		# For each line of the stack trace, replace the original arguments with the
