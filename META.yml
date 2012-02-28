@@ -1,0 +1,34 @@
+---
+abstract: 'Add stack traces without sensitive information in Log::Log4perl logs.'
+author:
+  - 'Guillaume Aubert <aubertg@cpan.org>'
+  - 'Kate Kirby <kate@cpan.org>'
+build_requires:
+  Carp: 0
+  Carp::Parse::Redact: 0
+  Data::Dumper: 0
+  File::Spec: 0
+  File::Temp: 0
+  Log::Log4perl: 0
+  Perl6::Slurp: 0
+  Test::Exception: 0
+  Test::More: 0
+  Try::Tiny: 0
+configure_requires:
+  Module::Build: 0.4
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.120530'
+license: artistic
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Log-Log4perl-Layout-PatternLayout-Redact
+provides:
+  Log::Log4perl::Layout::PatternLayout::Redact:
+    file: lib/Log/Log4perl/Layout/PatternLayout/Redact.pm
+    version: v1.0.0
+requires:
+  perl: 5.006
+resources:
+  license: http://opensource.org/licenses/artistic-license.php
+version: v1.0.0

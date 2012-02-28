@@ -1,0 +1,56 @@
+{
+   "abstract" : "Add stack traces without sensitive information in Log::Log4perl logs.",
+   "author" : [
+      "Guillaume Aubert <aubertg@cpan.org>",
+      "Kate Kirby <kate@cpan.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120530",
+   "license" : [
+      "artistic_1"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Log-Log4perl-Layout-PatternLayout-Redact",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Carp" : "0",
+            "Carp::Parse::Redact" : "0",
+            "Data::Dumper" : "0",
+            "File::Spec" : "0",
+            "File::Temp" : "0",
+            "Log::Log4perl" : "0",
+            "Perl6::Slurp" : "0",
+            "Test::Exception" : "0",
+            "Test::More" : "0",
+            "Try::Tiny" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.4"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "perl" : "5.006"
+         }
+      }
+   },
+   "provides" : {
+      "Log::Log4perl::Layout::PatternLayout::Redact" : {
+         "file" : "lib/Log/Log4perl/Layout/PatternLayout/Redact.pm",
+         "version" : "v1.0.0"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://opensource.org/licenses/artistic-license.php"
+      ]
+   },
+   "version" : "v1.0.0"
+}
