@@ -38,7 +38,7 @@ ok(
 );
 
 ok(
-	local $Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_ARGUMENTS_NAME =
+	local $Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_ARGUMENT_NAMES =
 	[
 		'ship_zip',
 		'password',
