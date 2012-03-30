@@ -42,6 +42,7 @@ Version 1.0.0
 our $VERSION = '1.0.0';
 
 our $SENSITIVE_ARGUMENTS_NAME = undef;
+our $SENSITIVE_REGEXP_PATTERNS = undef;
 
 
 =head1 SYNOPSIS
@@ -59,6 +60,26 @@ Here's an example of log4perl configuration that outputs a redacted trace
 	log4perl.appender.logfile.recreate                 = 1
 	log4perl.appender.logfile.mode                     = append
 
+You can customize how the arguments are redacted (instead of using the defaults
+provided by C<Carp::Parse::Redact>) by localizing two variables:
+
+	# To override what argument names are considered sensitive.
+	local $Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_ARGUMENTS_NAME =
+	[
+			password
+			passwd
+			cc_number
+			cc_exp
+			ccv
+	];
+	
+	# To override what patterns are used to find and redact sensitive data
+	# independently of the search by hash key.
+	local $Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_REGEXP_PATTERNS =
+	[
+		qr/^\d{16}$/,
+	]
+
 =cut
 
 # Add '%E' to the list of options available for the Log4perl layout.
@@ -71,7 +92,8 @@ Log::Log4perl::Layout::PatternLayout::add_global_cspec(
 		
 		my $redacted_stack_trace = Carp::Parse::Redact::parse_stack_trace(
 			$trace,
-			sensitive_argument_names => $SENSITIVE_ARGUMENTS_NAME,
+			sensitive_argument_names  => $SENSITIVE_ARGUMENTS_NAME,
+			sensitive_regexp_patterns => $SENSITIVE_REGEXP_PATTERNS,
 		);
 		
 		# For each line of the stack trace, replace the original arguments with the
