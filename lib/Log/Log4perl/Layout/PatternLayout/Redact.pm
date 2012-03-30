@@ -35,11 +35,11 @@ can be PCI-compliant.
 
 =head1 VERSION
 
-Version 1.0.3
+Version 1.1.0
 
 =cut
 
-our $VERSION = '1.0.3';
+our $VERSION = '1.1.0';
 
 our $SENSITIVE_ARGUMENT_NAMES = undef;
 our $SENSITIVE_REGEXP_PATTERNS = undef;

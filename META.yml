@@ -26,9 +26,9 @@ name: Log-Log4perl-Layout-PatternLayout-Redact
 provides:
   Log::Log4perl::Layout::PatternLayout::Redact:
     file: lib/Log/Log4perl/Layout/PatternLayout/Redact.pm
-    version: v1.0.3
+    version: v1.1.0
 requires:
   perl: 5.006
 resources:
   license: http://opensource.org/licenses/artistic-license.php
-version: v1.0.3
+version: v1.1.0

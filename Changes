@@ -1,5 +1,8 @@
 Revision history for Log-Log4perl-Layout-PatternLayout-Redact
 
+1.1.0   03/30/2012
+        Added feature to redact using regexes.
+
 1.0.3   02/29/2012
         Actually committing the change before I build.
 

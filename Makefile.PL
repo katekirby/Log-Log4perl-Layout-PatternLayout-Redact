@@ -3,25 +3,25 @@ require 5.006;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'test' => {
-              'TESTS' => 't/*.t'
-            },
-  'PL_FILES' => {},
-  'INSTALLDIRS' => 'site',
-  'NAME' => 'Log::Log4perl::Layout::PatternLayout::Redact',
-  'EXE_FILES' => [],
-  'VERSION_FROM' => 'lib/Log/Log4perl/Layout/PatternLayout/Redact.pm',
-  'PREREQ_PM' => {
-                   'Try::Tiny' => 0,
-                   'Perl6::Slurp' => 0,
-                   'Test::Exception' => 0,
-                   'File::Spec' => 0,
-                   'Data::Dumper' => 0,
-                   'Carp::Parse::Redact' => 0,
-                   'Carp' => 0,
-                   'Test::More' => 0,
-                   'File::Temp' => 0,
-                   'Log::Log4perl' => 0
-                 }
-)
+          'NAME' => 'Log::Log4perl::Layout::PatternLayout::Redact',
+          'VERSION_FROM' => 'lib/Log/Log4perl/Layout/PatternLayout/Redact.pm',
+          'PREREQ_PM' => {
+                           'Carp' => 0,
+                           'Carp::Parse::Redact' => 0,
+                           'Data::Dumper' => 0,
+                           'File::Spec' => 0,
+                           'File::Temp' => 0,
+                           'Log::Log4perl' => 0,
+                           'Perl6::Slurp' => 0,
+                           'Test::Exception' => 0,
+                           'Test::More' => 0,
+                           'Try::Tiny' => 0
+                         },
+          'INSTALLDIRS' => 'site',
+          'EXE_FILES' => [],
+          'PL_FILES' => {},
+          'test' => {
+                      'TESTS' => 't/*.t'
+                    }
+        )
 ;
