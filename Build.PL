@@ -15,7 +15,7 @@ my $builder = Module::Build->new(
 	build_requires       =>
 	{
 		'Carp'                => 0,
-		'Carp::Parse::Redact' => 0,
+		'Carp::Parse::Redact' => '1.001000',
 		'Data::Dumper'        => 0,
 		'File::Spec'          => 0,
 		'File::Temp'          => 0,

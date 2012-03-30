@@ -7,7 +7,7 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Log/Log4perl/Layout/PatternLayout/Redact.pm',
           'PREREQ_PM' => {
                            'Carp' => 0,
-                           'Carp::Parse::Redact' => 0,
+                           'Carp::Parse::Redact' => '1.001000',
                            'Data::Dumper' => 0,
                            'File::Spec' => 0,
                            'File::Temp' => 0,
