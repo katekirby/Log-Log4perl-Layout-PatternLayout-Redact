@@ -99,7 +99,7 @@ Log::Log4perl::Layout::PatternLayout::add_global_cspec(
 		
 		my $redacted_stack_trace = Carp::Parse::Redact::parse_stack_trace(
 			$trace,
-			sensitive_argument_names  => $SENSITIVE_ARGUMENTS_NAMES,
+			sensitive_argument_names  => $SENSITIVE_ARGUMENT_NAMES,
 			sensitive_regexp_patterns => $SENSITIVE_REGEXP_PATTERNS,
 		);
 		
