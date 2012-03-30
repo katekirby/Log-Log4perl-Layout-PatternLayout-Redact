@@ -10,7 +10,7 @@ use Log::Log4perl::Appender::File;
 use Log::Log4perl::Layout::PatternLayout::Redact;
 use Perl6::Slurp;
 use Test::Exception;
-use Test::More tests => 12;
+use Test::More tests => 13;
 use Try::Tiny;
 
 
@@ -22,6 +22,8 @@ my %confidential_data =
 	'ship_zip'     => '01138',
 	'gift_message' => "Happy\nBirthday\n\tLove,\n\tTimmy",
 );
+my $test_credit_card_number = '4111111111111111';
+
 
 ok(
 	local $Carp::MaxArgNums = 20,
@@ -78,7 +80,10 @@ ok(
 # Test::Exception, let us know!
 try
 {
-	test_trace( %confidential_data );
+	test_trace(
+		%confidential_data,
+		$test_credit_card_number,
+	);
 }
 finally
 {
@@ -118,13 +123,17 @@ like(
 	'[redacted] is present.',
 ) || diag( "---- begin: logger content ----\n$log_contents\n---- end: logger content ----\n" );
 
+unlike(
+	$log_contents,
+	qr/$test_credit_card_number/,
+	'The test credit card number is not in the log.',
+) || diag( "---- begin: logger content ----\n$log_contents\n---- end: logger content ----\n" );
+
 
 # This subroutine exists because we want to redact from the subroutine trace of
 # the arguments, so we need a level of indirection.
 
 sub test_trace
 {
-	my ( %data ) = @_;
-	
 	$logger->error( "$$: Test.");
 }
