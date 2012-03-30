@@ -1,4 +1,14 @@
 Revision history for Log-Log4perl-Layout-PatternLayout-Redact
 
+1.0.3   02/29/2012
+        Actually committing the change before I build.
+
+1.0.2   02/28/2012
+        Fixed the test file for the 1.0.1 variable name change.
+
+1.0.1   02/28/2012
+        Fixed the package variable name to be consistent with Carp::Parse::Redact.
+		Added more documentation on how to set keys to be redacted.
+
 1.0.0   02/28/2012
         First public release.
