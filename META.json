@@ -43,14 +43,21 @@
    "provides" : {
       "Log::Log4perl::Layout::PatternLayout::Redact" : {
          "file" : "lib/Log/Log4perl/Layout/PatternLayout/Redact.pm",
-         "version" : "v1.1.1"
+         "version" : "v1.2.0"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "http://rt.cpan.org/NoAuth/ReportBug.html?Queue=log-log4perl-layout-patternlayout-redact"
+      },
+      "homepage" : "https://metacpan.org/release/Log-Log4perl-Layout-PatternLayout-Redact",
       "license" : [
          "http://opensource.org/licenses/artistic-license.php"
-      ]
+      ],
+      "repository" : {
+         "url" : "https://sourceforge.net/p/logredact/code"
+      }
    },
-   "version" : "v1.1.1"
+   "version" : "v1.2.0"
 }

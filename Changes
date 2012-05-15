@@ -1,5 +1,8 @@
 Revision history for Log-Log4perl-Layout-PatternLayout-Redact
 
+1.2.0   05/15/2012
+        Added feature to redact messages with a callback subroutine.
+
 1.1.1   03/30/2012
         Updated dependencies.
 
