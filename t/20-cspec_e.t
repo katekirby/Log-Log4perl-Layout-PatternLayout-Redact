@@ -53,7 +53,7 @@ qq|
 	log4perl.appender.logfile                          = Log::Log4perl::Appender::File
 	log4perl.appender.logfile.filename                 = $file_name
 	log4perl.appender.logfile.layout                   = Log::Log4perl::Layout::PatternLayout::Redact
-	log4perl.appender.logfile.layout.ConversionPattern = %d %p: (%X{host}) %P %F:%L %M - %e{chomp}
+	log4perl.appender.logfile.layout.ConversionPattern = %d %p: (%X{host}) %P %F:%L %M - %e
 	log4perl.appender.logfile.recreate                 = 1
 	log4perl.appender.logfile.mode                     = append
 |;
