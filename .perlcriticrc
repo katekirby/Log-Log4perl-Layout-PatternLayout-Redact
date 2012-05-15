@@ -10,3 +10,8 @@ minimum_regex_length_to_complain_about = 50
 
 # Allow map in void context, now that it's efficient again.
 [-BuiltinFunctions::ProhibitVoidMap]
+
+# Use only core PerlCritic policies.
+# This prevents tests from failing if the tester / installer has non-standard
+# additional PerlCritic policies.
+theme = core
