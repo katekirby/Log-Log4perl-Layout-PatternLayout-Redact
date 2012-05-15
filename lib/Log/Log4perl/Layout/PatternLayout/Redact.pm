@@ -15,6 +15,8 @@ use base 'Log::Log4perl::Layout::PatternLayout';
 
 use Carp;
 use Carp::Parse::Redact;
+use Data::Validate::Type;
+use Try::Tiny;
 
 
 =head1 NAME
@@ -43,7 +45,7 @@ our $VERSION = '1.1.1';
 
 our $SENSITIVE_ARGUMENT_NAMES = undef;
 our $SENSITIVE_REGEXP_PATTERNS = undef;
-
+our $MESSAGE_REDACTION_CALLBACK = undef;
 
 =head1 SYNOPSIS
 
@@ -90,6 +92,7 @@ initialized your logger.
 =cut
 
 # Add '%E' to the list of options available for the Log4perl layout.
+# This offers a redacted stack trace.
 Log::Log4perl::Layout::PatternLayout::add_global_cspec(
 	'E',
 	sub
@@ -125,6 +128,36 @@ Log::Log4perl::Layout::PatternLayout::add_global_cspec(
 		my $redacted_trace = join( "\n", @$lines );
 		
 		return "\n" . $redacted_trace;
+	}
+);
+
+# Add '%e' to the list of options available for the Log4perl layout.
+# This offers a redacted message.
+Log::Log4perl::Layout::PatternLayout::add_global_cspec(
+	'e',
+	sub
+	{
+		my ( $self, $message ) = @_;
+		
+		return $message
+			if !defined( $MESSAGE_REDACTION_CALLBACK );
+		
+		my $redacted_message;
+		try
+		{
+			Carp::croak('the message redaction callback is not a valid code reference')
+				if !Data::Validate::Type::is_coderef( $MESSAGE_REDACTION_CALLBACK );
+			
+			$redacted_message = $MESSAGE_REDACTION_CALLBACK->( $message );
+		}
+		catch
+		{
+			my $error = $_;
+			Carp::carp("Failed to redact message: $error");
+			return $message;
+		};
+		
+		return $redacted_message;
 	}
 );
 
