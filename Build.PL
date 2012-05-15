@@ -35,6 +35,15 @@ my $builder = Module::Build->new(
 	],
 	create_makefile_pl   => 'traditional',
 	recursive_test_files => 1,
+	meta_merge           =>
+	{
+		resources             =>
+		{
+			repository  => 'https://sourceforge.net/p/logredact/code',
+			homepage    => 'https://metacpan.org/release/Log-Log4perl-Layout-PatternLayout-Redact',
+			bugtracker  => 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=log-log4perl-layout-patternlayout-redact',
+		},
+	},
 );
 
 $builder->create_build_script();
