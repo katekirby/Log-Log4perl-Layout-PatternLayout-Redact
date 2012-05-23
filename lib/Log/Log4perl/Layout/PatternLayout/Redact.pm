@@ -67,7 +67,7 @@ Here's an example of log4perl configuration that outputs a redacted trace
 To set your own list of arguments to redact, rather than use the defaults in C<Carp::Parse::Redact>,
 you need to set a localized version of $SENSITIVE_ARGUMENT_NAMES:
 
-	local $Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_ARGUMENT_NAMES = 
+	$Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_ARGUMENT_NAMES = 
 	[
 		'password',
 		'luggage_combination',
@@ -80,7 +80,7 @@ To set your own list of regexes to use for redaction, rather than use the
 defaults in C<Carp::Parse::Redact>, you need to set a localized version of
 $SENSITIVE_REGEXP_PATTERNS:
 
-	local $Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_REGEXP_PATTERNS =
+	$Log::Log4perl::Layout::PatternLayout::Redact::SENSITIVE_REGEXP_PATTERNS =
 	[
 		qr/^\d{16}$/,
 	]
@@ -107,7 +107,7 @@ Here's an example of log4perl configuration that outputs a redacted message
 To redact the message, you will need to write your own redaction subroutine as
 follows:
 
-	local $Log::Log4perl::Layout::PatternLayout::Redact::MESSAGE_REDACTION_CALLBACK = sub
+	$Log::Log4perl::Layout::PatternLayout::Redact::MESSAGE_REDACTION_CALLBACK = sub
 	{
 		my ( $message ) = @_;
 		
