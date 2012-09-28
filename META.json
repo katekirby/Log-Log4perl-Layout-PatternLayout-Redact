@@ -5,9 +5,9 @@
       "Kate Kirby <kate@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120530",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "artistic_1"
+      "open_source"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -31,7 +31,7 @@
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.4"
+            "Module::Build" : "0.40"
          }
       },
       "runtime" : {
@@ -43,7 +43,7 @@
    "provides" : {
       "Log::Log4perl::Layout::PatternLayout::Redact" : {
          "file" : "lib/Log/Log4perl/Layout/PatternLayout/Redact.pm",
-         "version" : "v1.2.0"
+         "version" : "v1.2.1"
       }
    },
    "release_status" : "stable",
@@ -53,11 +53,11 @@
       },
       "homepage" : "https://metacpan.org/release/Log-Log4perl-Layout-PatternLayout-Redact",
       "license" : [
-         "http://opensource.org/licenses/artistic-license.php"
+         "http://www.gnu.org/licenses/gpl-3.0.txt"
       ],
       "repository" : {
-         "url" : "https://sourceforge.net/p/logredact/code"
+         "url" : "https://github.com/katekirby/Log-Log4perl-Layout-PatternLayout-Redact.git"
       }
    },
-   "version" : "v1.2.0"
+   "version" : "v1.2.1"
 }

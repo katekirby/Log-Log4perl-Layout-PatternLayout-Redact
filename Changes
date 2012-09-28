@@ -1,5 +1,9 @@
 Revision history for Log-Log4perl-Layout-PatternLayout-Redact
 
+1.2.1   09/26/2012
+        Moved to github
+        Upgraded license to GPL_3
+
 1.2.0   05/15/2012
         Added feature to redact messages with a callback subroutine.
 

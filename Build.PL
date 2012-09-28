@@ -5,7 +5,7 @@ use Module::Build;
 
 my $builder = Module::Build->new(
 	module_name          => 'Log::Log4perl::Layout::PatternLayout::Redact',
-	license              => 'artistic',
+	license              => 'GPL_3',
 	dist_author          =>
 	[
 		'Guillaume Aubert <aubertg@cpan.org>',
@@ -39,7 +39,7 @@ my $builder = Module::Build->new(
 	{
 		resources             =>
 		{
-			repository  => 'https://sourceforge.net/p/logredact/code',
+			repository  => 'https://github.com/katekirby/Log-Log4perl-Layout-PatternLayout-Redact.git',
 			homepage    => 'https://metacpan.org/release/Log-Log4perl-Layout-PatternLayout-Redact',
 			bugtracker  => 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=log-log4perl-layout-patternlayout-redact',
 		},
