@@ -14,20 +14,21 @@ my $builder = Module::Build->new(
 	dist_version_from    => 'lib/Log/Log4perl/Layout/PatternLayout/Redact.pm',
 	build_requires       =>
 	{
-		'Carp'                => 0,
-		'Carp::Parse::Redact' => '1.001000',
-		'Data::Dumper'        => 0,
-		'File::Spec'          => 0,
-		'File::Temp'          => 0,
-		'Log::Log4perl'       => 0,
-		'Perl6::Slurp'        => 0,
-		'Test::Exception'     => 0,
-		'Test::More'          => 0,
-		'Try::Tiny'           => 0,
+		'Data::Dumper'         => 0,
+		'File::Spec'           => 0,
+		'File::Temp'           => 0,
+		'Perl6::Slurp'         => 0,
+		'Test::Exception'      => 0,
+		'Test::More'           => 0,
 	},
 	requires             =>
 	{
-		'perl'                => 5.006,
+		'Carp'                 => 0,
+		'Carp::Parse::Redact'  => '1.001000',
+		'Data::Validate::Type' => 0,
+		'Log::Log4perl'        => 0,
+		'Try::Tiny'            => 0,
+		'perl'                 => 5.006,
 	},
 	add_to_cleanup       =>
 	[
