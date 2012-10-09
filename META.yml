@@ -4,16 +4,12 @@ author:
   - 'Guillaume Aubert <aubertg@cpan.org>'
   - 'Kate Kirby <kate@cpan.org>'
 build_requires:
-  Carp: 0
-  Carp::Parse::Redact: 1.001000
   Data::Dumper: 0
   File::Spec: 0
   File::Temp: 0
-  Log::Log4perl: 0
   Perl6::Slurp: 0
   Test::Exception: 0
   Test::More: 0
-  Try::Tiny: 0
 configure_requires:
   Module::Build: 0.40
 dynamic_config: 1
@@ -28,6 +24,11 @@ provides:
     file: lib/Log/Log4perl/Layout/PatternLayout/Redact.pm
     version: v1.2.1
 requires:
+  Carp: 0
+  Carp::Parse::Redact: 1.001000
+  Data::Validate::Type: 0
+  Log::Log4perl: 0
+  Try::Tiny: 0
   perl: 5.006
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/ReportBug.html?Queue=log-log4perl-layout-patternlayout-redact
