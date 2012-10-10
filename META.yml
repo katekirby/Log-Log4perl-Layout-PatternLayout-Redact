@@ -22,7 +22,7 @@ name: Log-Log4perl-Layout-PatternLayout-Redact
 provides:
   Log::Log4perl::Layout::PatternLayout::Redact:
     file: lib/Log/Log4perl/Layout/PatternLayout/Redact.pm
-    version: v1.2.1
+    version: v1.2.2
 requires:
   Carp: 0
   Carp::Parse::Redact: 1.001000
@@ -35,4 +35,4 @@ resources:
   homepage: https://metacpan.org/release/Log-Log4perl-Layout-PatternLayout-Redact
   license: http://www.gnu.org/licenses/gpl-3.0.txt
   repository: https://github.com/katekirby/Log-Log4perl-Layout-PatternLayout-Redact.git
-version: v1.2.1
+version: v1.2.2

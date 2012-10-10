@@ -44,7 +44,7 @@
    "provides" : {
       "Log::Log4perl::Layout::PatternLayout::Redact" : {
          "file" : "lib/Log/Log4perl/Layout/PatternLayout/Redact.pm",
-         "version" : "v1.2.1"
+         "version" : "v1.2.2"
       }
    },
    "release_status" : "stable",
@@ -60,5 +60,5 @@
          "url" : "https://github.com/katekirby/Log-Log4perl-Layout-PatternLayout-Redact.git"
       }
    },
-   "version" : "v1.2.1"
+   "version" : "v1.2.2"
 }
